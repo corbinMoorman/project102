@@ -18,11 +18,11 @@ for i in from_dir:
         path1 = from_dir + "/" + i
         path2 = to_dir + "/" + "Document_Files"
         path3 = to_dir + "/" + "Document_Files" + "/" + i
-    if(os.path.exists(path2)):
-        print("Moving" + name + "...")
-        shutil.move(path1, path3)
-    else:
-        os.makedirs(path2)
-        shutil.move(path1, path3)
-        print("Moving" + name + "...")
+        if(os.path.exists(path2)):
+            print("Moving" + name + "...")
+            shutil.move(path1, path3)
+        else:
+            os.makedirs(path2)
+            shutil.move(path1, path3)
+            print("Moving" + name + "...")
         
